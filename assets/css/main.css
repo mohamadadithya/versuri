@@ -1,0 +1,287 @@
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  padding: 16px 0;
+  background-color: wheat;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.header .container {
+  display: block;
+}
+
+.header .container .menu {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .container .menu .logo {
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+.header .container .menu .icon {
+  display: unset;
+  cursor: pointer;
+}
+
+.header .container .search {
+  display: none;
+  margin-top: 15px;
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #f5f5f7;
+  border-radius: 6px;
+}
+
+.header .container .search.visible {
+  display: block;
+}
+
+.header .container .search:focus {
+  border-color: black;
+}
+
+section.hot-songs {
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+section.show-lyrics {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: .6s all ease;
+  transition: .6s all ease;
+  overflow-y: scroll;
+}
+
+section.show-lyrics .title {
+  font-size: 1.4rem;
+}
+
+section.show-lyrics .lyrics {
+  margin-top: 20px;
+}
+
+section.show-lyrics.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+section.search-songs {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: .6s all ease;
+  transition: .6s all ease;
+  overflow-y: scroll;
+}
+
+section.search-songs.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.song-comp {
+  padding: 12px 0;
+  background-color: white;
+  border-bottom: 1px solid grey;
+}
+
+.song-comp .title {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 30px;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-flex.between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.d-flex.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.text-grey {
+  color: grey;
+}
+
+.text-link {
+  color: blue;
+}
+
+.heading {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+
+.btn-back {
+  cursor: pointer;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .container .menu {
+    margin-bottom: 0;
+  }
+  .header .container .menu .icon {
+    display: none;
+  }
+  .header .container .search {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  opacity: 0;
+}
+
+.preloader .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.preloader .lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid wheat;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: wheat transparent transparent transparent;
+}
+
+.preloader .lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.preloader .lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.preloader .lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+.preloader.show {
+  opacity: 1;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */

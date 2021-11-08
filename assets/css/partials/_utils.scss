@@ -1,0 +1,45 @@
+.container {
+    margin: 0 30px;
+}
+
+.d-flex {
+    display: flex;
+
+    &.between {
+        justify-content: space-between;
+    }
+
+    &.center {
+        align-items: center;
+    }
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.text-grey {
+    color: grey;
+}
+
+.text-link {
+    color: blue;
+}
+
+.heading {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+}
+
+.btn-back {
+    cursor: pointer;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}

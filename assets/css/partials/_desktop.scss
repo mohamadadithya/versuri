@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+    .header {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .menu {
+                margin-bottom: 0;
+
+                .icon {
+                    display: none;
+                }
+            }
+
+            .search {
+                display: block;
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+$primaryFont: 'Poppins',
+sans-serif;
+$secondaryFont: 'Mochiy Pop One',
+sans-serif;
+
+:root {
+    font-family: $primaryFont;
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    padding: 16px 0;
+    background-color: wheat;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    .container {
+        display: block;
+
+        .menu {
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                font-family: $secondaryFont;
+            }
+
+            .icon {
+                display: unset;
+                cursor: pointer;
+            }
+        }
+
+        .search {
+            display: none;
+            margin-top: 15px;
+            width: 100%;
+            padding: 6px 12px;
+            border: 1px solid #f5f5f7;
+            border-radius: 6px;
+
+            &.visible {
+                display: block;
+            }
+
+            &:focus {
+                border-color: black;
+            }
+        }
+    }
+}
+
+section.hot-songs {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+section.show-lyrics {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translateX(100%);
+    transition: .6s all ease;
+    overflow-y: scroll;
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .lyrics {
+        margin-top: 20px;
+    }
+
+    &.open {
+        transform: translateX(0);
+    }
+}
+
+section.search-songs {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translateX(100%);
+    transition: .6s all ease;
+    overflow-y: scroll;
+
+    &.open {
+        transform: translateX(0);
+    }
+}
+
+// Reusable Components
+.song-comp {
+    .title {
+        cursor: pointer;
+    }
+
+    padding: 12px 0;
+    background-color: white;
+    border-bottom: 1px solid grey;
+}
+
+@import './partials/utils';
+@import './partials/desktop';
+@import './partials/preloader';
